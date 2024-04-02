@@ -222,7 +222,6 @@ console.log(newSum); // 72
 ## `Practice Session 1 Walkthrough`
 
 - Repeat Name(Intro to Functions)
-- be cool(parameters)
 - Yell(String operators)
 - Plus Five(Math Operators)
 - Average of Four(Math Operators)

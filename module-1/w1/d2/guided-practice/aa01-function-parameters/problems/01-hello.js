@@ -5,11 +5,16 @@ HINT: this function doesn't need to return anything, it should just print using
 console.log.
 */
 
-// Your code here 
+
+function hello(str) {
+  // console.log('Hello, ' + str)
+  console.log(`Hello, ${str}`)
+  return 'Hello, ' + str
+}
 
 // Note: If you console.log the return value of these function calls; you will get undefined. Remember a function that does not return anything evaluates to undefined.
 
-// hello("cat"); // "Hello, cat"
+console.log(hello("cat")); // "Hello, cat"
 // hello("Helen"); // "Hello, Helen"
 // hello("Sting"); // "Hello, Sting"
 

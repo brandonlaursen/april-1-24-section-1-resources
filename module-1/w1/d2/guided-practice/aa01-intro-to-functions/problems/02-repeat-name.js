@@ -1,3 +1,4 @@
+
 /*
 Assign the variables repeatDaniel, repeatMark, and repeatBeyonce to values
 by calling the repeatName(name) function so that the console.logs will
@@ -8,15 +9,15 @@ function repeatName(name) {
   return name + " " + name;
 }
 
-// Your code here 
+// console.log(repeatName('brandon'));// brandon brandon
 
-// let repeatDaniel;
-// let repeatMark;
-// let repeatBeyonce;
+let repeatDaniel = repeatName('Daniel');
+let repeatMark = repeatName('Mark')
+let repeatBeyonce = '!!!' + repeatName('Beyonce') + '!!!';
 
-// console.log(repeatDaniel);  // => "Daniel Daniel"
-// console.log(repeatMark);    // => "Mark Mark"
-// console.log(repeatBeyonce); // => "!!!Beyonce Beyonce!!!"
+console.log(repeatDaniel);  // => "Daniel Daniel"
+console.log(repeatMark);    // => "Mark Mark"
+console.log(repeatBeyonce); // => "!!!Beyonce Beyonce!!!"
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = repeatName;
