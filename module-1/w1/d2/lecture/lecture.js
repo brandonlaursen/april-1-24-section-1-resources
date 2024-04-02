@@ -8,3 +8,17 @@ git commit -m 'message' - commit the changes
 git push - push the changes up to github
 
 */
+
+
+
+// template interpolation
+
+let name = 'brandon';
+
+console.log('hello ' + name);
+
+console.log(`hello ${name}`)
+
+// string interpolation
+// `` - open up a template literal
+// ${} - embedded a variable/expression
