@@ -2,6 +2,7 @@
 
 - Typical Lecture Format
 - Online Lecture Etiquette
+- Section 1 Repo
 - Functions
 - Conditionals
 - Loops

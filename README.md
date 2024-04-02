@@ -55,10 +55,9 @@ git pull
 Make sure that you are in the root directory of the `section-1-resources` repo so that you receive the most up to date version of the directory.
 # april-1-24-section-1-resources
 
-## Note
+## Notes
 You will not be able to push to this repo, if you want to take notes in this repo I would clone down this repo twice and remove the .git
 - you can do so by cd into the repo after cloning and running rm -rf .git
 * be very careful using rm -rf! It could delete everything in your current directory
 
 ### Another option would be to to put notes.js in the .gitignore; anytime you take notes it would be done so in a notes.js. This will be ignore by git
-
