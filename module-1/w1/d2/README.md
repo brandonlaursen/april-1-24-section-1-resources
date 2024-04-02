@@ -212,7 +212,7 @@ let newSum = sum + 50;
 console.log(newSum); // 72
 ```
 
-## `Practice Session 1 - 45m (SOLO)`
+## `Practice Session 1 - Meet back after lunch (SOLO)`
 
 - Intro to Function Header
 - Function Parameters Header
@@ -292,7 +292,7 @@ if (0) {
 
 
 
-## `Practice Session 2 - 45m(SOLO)`
+## `Practice Session 2 - 1h(SOLO)`
 
 - Conditionals Header
 
@@ -450,7 +450,7 @@ function logBetween(num1, num2) {
 logBetween(1, 10); //1,2,3,4,5,6,7,8,9,10
 ```
 
-## `Practice Session 3 - 45m (SOLO)`
+## `Practice Session 3 - 1h (SOLO)`
 
 - Basic Loops Header
 
