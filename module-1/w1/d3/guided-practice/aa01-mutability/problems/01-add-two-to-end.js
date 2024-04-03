@@ -25,7 +25,10 @@ const addTwo = (num) => num + 2;
 
 console.log(addTwo(5));
 
-let addTwoToEnd = (arr, ele1, ele2) => (arr.push(ele1, ele2), arr);
+let addTwoToEnd = (arr, ele1, ele2) => {
+  arr.push(ele1, ele2)
+  return arr;
+}
 
 let arr1 = ["a", "b"];
 let added1 = addTwoToEnd(arr1, "c", "d");
