@@ -7,12 +7,23 @@ indices within the range of indices defined by the starting and ending numbers,
 inclusive.
 */
 
-// Your code here 
+function selectElementsInRange(arr, min, max) {
+
+  let res = [];
+  if (min > max) {
+      return res;
+  }
+
+  for (let i = min; i <= max; i++) {
+      res.push(arr[i]);
+  }
+  return res;
+}
 
 
-// console.log(selectElementsInRange([1, 2, 3], 0, 1));        // [1, 2]
-// console.log(selectElementsInRange([2, 6, 9, 3, 1], 0, 3));  // [2, 6, 9, 3]
-// console.log(selectElementsInRange([7, 9, 10, 4, 5], 2, 4)); // [10, 4, 5]
+console.log(selectElementsInRange([1, 2, 3], 0, 1));        // [1, 2]
+console.log(selectElementsInRange([2, 6, 9, 3, 1], 0, 3));  // [2, 6, 9, 3]
+console.log(selectElementsInRange([7, 9, 10, 4, 5], 2, 4)); // [10, 4, 5]
 
 /******************* DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = selectElementsInRange;
