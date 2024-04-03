@@ -1,26 +1,12 @@
 # `Week 1 Day 3 `
-- Polya's problem solving framework
-- Debugging
 - Arrays
 - Mutability
 - Array Methods
 - Function Expressions
+- Polya's problem solving framework
+- Debugging
 - Terminal and Local JavaScript
 
-
-
-## `Polya's Framework`
-### 4 part process for problem solving!
-  1. Define the problem -  what is the prompt asking?
-  2. Make a plan
-  3. Execute the plan
-  4. Refactor
-
-## `Debugging`
-1. Read your error messages
-2. console.log values you want to test / blocks you want to make sure are running
-3. Manually test your code, don't just assume that it will work. Check your edge cases.
-4. Plan, plan, plan, and only then start coding. Think about what you need to code before just throwing some random javascript at the problem. Programming is 95% thinking, typing is just to bring those plans into reality.
 
 ## `Arrays`
  * Arrays are useful when you need to hold more than just value;
@@ -250,6 +236,19 @@ console.log("mutated array", shiftArr, "shifting", firstEle);
 * choosey-endings
 
 
+## `Polya's Framework`
+### 4 part process for problem solving!
+  1. Define the problem -  what is the prompt asking?
+  2. Make a plan
+  3. Execute the plan
+  4. Refactor
+
+## `Debugging`
+1. Read your error messages
+2. console.log values you want to test / blocks you want to make sure are running
+3. Manually test your code, don't just assume that it will work. Check your edge cases.
+4. Plan, plan, plan, and only then start coding. Think about what you need to code before just throwing some random javascript at the problem. Programming is 95% thinking, typing is just to bring those plans into reality.
+
 ## Function Expression
 
 ### Function expression syntax!
@@ -402,10 +401,6 @@ This brings us around to the concept of first class objects.
   A relative path describes the location of a file relative to the current (working) directory*. 
 ## Absolute Path
   An absolute path describes the location from the root directory.
-
-
-## `Practice Session Terminal and Local JS (1h)`
-* Terminal and Local JavaScript Header
 
 ## `Skipping Skills Check`
 ## `Work on practices till EOD`
