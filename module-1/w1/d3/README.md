@@ -225,17 +225,6 @@ let firstEle = shiftArr.shift();
 console.log("mutated array", shiftArr, "shifting", firstEle);
 ```
 
-## `Practice Session 1 - 1h(SOLO)`
-* Mutability Header
-  * Use function expression syntax!
-
-## `Practice Session 1 Walkthrough`
-* range
-* doubler
-* remove-element
-* choosey-endings
-
-
 ## `Polya's Framework`
 ### 4 part process for problem solving!
   1. Define the problem -  what is the prompt asking?
@@ -300,6 +289,16 @@ This brings us around to the concept of first class objects.
 1. It can be stored in a `variable`
 2. it can be passed as an `argument` to a `function` (coming up next week!)
 3. It can be returned from a `function` (also coming up next week!)
+
+## `Practice Session 1 - 1h 15m(SOLO)`
+* Mutability Header
+  * Use function expression syntax!
+
+## `Practice Session 1 Walkthrough`
+* range
+* doubler
+* remove-element
+* choosey-endings
 
 ## `Terminal and Local JavaScript`
 ###  Steps to Run Project Locally
