@@ -17,19 +17,32 @@ fully uppercase or lowercase. The first word should be uppercase.
 */
 
 
-let alternatingWords = function (arr) {
+// let alternatingWords = function (arr) {
 
-  for(let i = 0; i < arr.length; i++) {
+//   for(let i = 0; i < arr.length; i++) {
 
-    if(i % 2 === 0) {
-      arr[i] = arr[i].toUpperCase()
-    } else {
-      arr[i] = arr[i].toLowerCase()
-    }
+//     if(i % 2 === 0) {
+//       arr[i] = arr[i].toUpperCase()
+//     } else {
+//       arr[i] = arr[i].toLowerCase()
+//     }
+//   };
+
+//   return arr;
+// }
+
+function alternatingWords(arr) {
+
+  for (i = 0; i < arr.length; i++) {
+
+      if (i % 2 === 0) {
+          arr[i] = arr[i].toUpperCase()
+      } else {
+          arr[i] = arr[i].toLowerCase()
+      }
   };
-
   return arr;
-}
+};
 
 
 let words1 = [ 'Belka', 'STRELKA', 'laika', 'DEZIK' ];
