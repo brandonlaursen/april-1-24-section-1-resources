@@ -27,8 +27,8 @@ each of its elements is the max value in a column.
 */
 let maxColumn = function (matrix) {
   let result = [];
-  let height = matrix[0].length;
-  let width = matrix.length;
+  let height = matrix.length;
+  let width = matrix[0].length;
 
   for (let col = 0; col < width; col++) {
     let highest = 0;
