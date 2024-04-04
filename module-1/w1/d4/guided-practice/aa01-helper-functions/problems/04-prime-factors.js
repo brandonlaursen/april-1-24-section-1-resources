@@ -7,6 +7,8 @@ function should return an array containing all of the prime numbers that can
 divide the given number evenly. Use the isPrime function as a helper function.
 */
 
+
+
 function isPrime(num) {
 
   if(num < 2) return false;
