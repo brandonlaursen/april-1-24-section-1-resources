@@ -5,7 +5,7 @@
 - POJO's
 - Iterating through Objects
 
-## `Assessment (1h49m)`
+## `Assessment (1h45m)`
 
 ## `Arrow Functions`
 
