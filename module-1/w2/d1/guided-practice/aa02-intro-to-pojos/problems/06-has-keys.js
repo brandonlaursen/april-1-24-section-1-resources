@@ -8,11 +8,27 @@ function hasKeys(obj, arr) {
   // console.log(arr);
   for (let ele of arr) {
     // console.log(ele)
+
+    // for in
     // if(!(ele in obj)) return false;
-    // if (obj[ele] === undefined) return false;
-    return !(obj[ele] !== undefined && false)
+
+    // short circuit ||
+    return (obj[ele] !== undefined) || 'string';
+
+    // short circuit &&
+    // return !(obj[ele] !== undefined && false)
 
   }
+
+
+
+  // Object.keys
+  for(let i = 0; i < array.length; i++){
+    if(!Object.keys(obj).includes(array[i])){
+      return false;
+    }
+  }
+
 
   return true;
 }

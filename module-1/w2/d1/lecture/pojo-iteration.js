@@ -64,3 +64,22 @@ console.log(entries);
 // for(let [key, value] of entries){
 //   console.log(key, value);
 // }
+/*
+[
+  ['key', 'value']
+  [ 'name', 'brandon' ],
+  [ 'age', 27 ],
+  [ 'favoriteBands', [ 'Joyce Manor', 'Neck Deep', 'Idles' ] ],
+  [ 'location', { city: 'Tampa', state: 'Florida' } ],
+  [ 'sayHello', [Function: sayHello] ]
+]
+*/
+
+// left
+let name = 'brandon';
+// right
+
+
+
+
+let math = 2 + 2;
