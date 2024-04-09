@@ -3,7 +3,19 @@ Write a function called `myMap` that behaves like the `Array.map`
 method.
 */
 
-// Your code here 
+function myMap(arr, cb) {
+  let newArr = [];
+  // console.log(arr, cb());
+
+  for(let i = 0; i < arr.length; i++){
+    let personObj = arr[i];
+    // console.log(personObj);
+    let result = cb(personObj);
+    // console.log(result);
+    newArr.push(result);
+  };
+  return newArr;
+}
 
 const friends = [
   {
@@ -28,7 +40,7 @@ const goodFriendsOrNot = myMap(
   friends,
   friend => friend.yearsOfFriendship > 5
 ); // [false, false, true, true]
-
+console.log(goodFriendsOrNot);// 
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 
