@@ -215,7 +215,7 @@ console.log(
 
 
 
-## `Practice Session 1 - 30m (SOLO)`
+## `Practice Session 1 - 45m (SOLO)`
 
 - Callbacks Header
 
@@ -326,15 +326,6 @@ let obj4 = { ...obj1, ...obj2, city: "tampa" };
 console.log(obj4);
 ```
 
-## `Practice Session 2 - 30m(SOLO)`
-
-- Rest and Spread Header
-
-## `Practice Session 2 Walkthrough`
-
-- rest-sum
-- break-down-object
-- copy-array
 
 ## `Destructuring`
 
@@ -453,13 +444,16 @@ function destructure({ name }) {
 destructure({ name: "brandon" });
 ```
 
+## `Practice Session 2 - 1h(Solo, grouped, or paired)`
 
-## `Practice Session 3 - 30m(SOLO)`
-
+- Rest and Spread Header
 - Destructuring Arrays and Objects Header
 
-## `Practice Session 3 Walkthrough`
+## `Practice Session 2 Walkthrough`
 
+- rest-sum
+- break-down-object
+- copy-array
 - array-destructuring
 - object-destructuring
 
