@@ -3,8 +3,13 @@ Write a function called `myForEach` that behaves like the `Array.forEach`
 method.
 */
 
+
 function myForEach(arr, cb) {
-  
+    // console.log(arr, cb)
+    for(let personObj of arr) {
+      console.log(personObj);
+      cb(personObj)
+    }
 }
 
 const friends = [
@@ -29,6 +34,19 @@ const friends = [
 myForEach(friends, friend => {
   console.log(friend.name + ": " + friend.yearsOfFriendship + " years");
 });
+
+myForEach(friends, function (friend)  {
+  console.log(friend.name + ": " + friend.yearsOfFriendship + " years");
+});
+
+let myFunc = friend => {
+  console.log(friend.name + ": " + friend.yearsOfFriendship + " years");
+}
+
+myForEach(friends, myFunc);
+
+
+
 
 /* prints:
 Albert: 3 years
