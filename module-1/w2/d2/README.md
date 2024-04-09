@@ -215,7 +215,7 @@ console.log(
 
 
 
-## `Practice Session 1 - 1h (SOLO)`
+## `Practice Session 1 - 30m (SOLO)`
 
 - Callbacks Header
 
@@ -326,7 +326,7 @@ let obj4 = { ...obj1, ...obj2, city: "tampa" };
 console.log(obj4);
 ```
 
-## `Practice Session 2 - 45m(SOLO)`
+## `Practice Session 2 - 30m(SOLO)`
 
 - Rest and Spread Header
 
