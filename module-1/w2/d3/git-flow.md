@@ -17,20 +17,27 @@ ex: `cd app-academy`
 - `cd` into the newly created directory ex:
   - `cd aa02-advanced-array`
   - Confirm with you're in the file with `ls`
-  - You should see the package.json, problems, and test directory
+  - You should see the `package.json`, `problems`, and test `directory`
+- Open up the project using `code .`
 - Inside folder; create `.gitignore`
   - `touch .gitignore`
+  - or right-click and create new file
 - Inside the `.gitignore` add the line
   - `/node_modules`
   * If it doesnt get ignored; can also try
   `node_modules` or `node_modules/`
 - run `npm install`
+## Connect the repo to github
+Could also copy paste the commands github
 - `git init`
 - `git add README.md`
 - `git commit -m "first commit"`
 - `git branch -M main`
 - ```git remote add origin https://github.com/brandonlaursen/array-methods-demo.git```
+  - Note: replace with your url from github
 - `git push -u origin main`
+
+Push up files to the repo
 - `git add .`
 - `git commit -m ‘message’`
 - `git push`
