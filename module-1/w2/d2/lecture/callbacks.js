@@ -60,4 +60,4 @@ function timesTwo(num) {
 //   return num * 2;
 // })
 
-// myFunc2( (num1, num2) => num1 * num2)
+myFunc2( (num1, num2) => num1 * num2)
