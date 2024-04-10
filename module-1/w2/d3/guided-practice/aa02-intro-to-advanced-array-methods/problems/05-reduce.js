@@ -7,27 +7,31 @@ output of `Array.reduce()` to the `totalYears` variable.
 const friends = [
   {
     name: "Albert",
-    yearsOfFriendship: 3
+    yearsOfFriendship: 3,
   },
   {
     name: "Angela",
-    yearsOfFriendship: 2
+    yearsOfFriendship: 2,
   },
   {
     name: "Freddy",
-    yearsOfFriendship: 8
+    yearsOfFriendship: 8,
   },
   {
     name: "Agatha",
-    yearsOfFriendship: 6
-  }
+    yearsOfFriendship: 6,
+  },
 ];
 
 // Hint: create an array of vowels to use in your solution.
 // const totalYears;
 
-// console.log(totalYears); // 19
+const totalYears = friends.reduce(
+  (sum, friend) => (sum += friend.yearsOfFriendship),
+  0
+);
 
+console.log(totalYears); // 19
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 
