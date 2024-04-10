@@ -62,18 +62,66 @@ const result = words.filter(function (word) {
 // Expected output: Array ["exuberant", "destruction", "present"]
 
 
-const array3 = [5, 12, 8, 130, 44];
+// const array3 = [5, 12, 8, 130, 44];
 
 
-const found = array3.reverse().find((element) => element > 10);
-// const 12 = [5, 12, 8, 130, 44].find((12) => 12 > 10);
+// const found = array3.reverse().find((element) => element > 10);
+// // const 12 = [5, 12, 8, 130, 44].find((12) => 12 > 10);
 
-// console.log(found);
-// Expected output: 12
-
-
-words = ["spray", "elite", "exuberant", "destruction", "present"];
+// // console.log(found);
+// // Expected output: 12
 
 
-// let foundWord = words.find((word) => word.startsWith('d'));
-// console.log(foundWord);
+// words = ["spray", "elite", "exuberant", "destruction", "present"];
+
+
+// // let foundWord = words.find((word) => word.startsWith('d'));
+// // console.log(foundWord);
+
+
+
+const array4 = [1, 2, 3, 4];
+const initialValue = 0;
+
+const sumWithInitial = array4.reduce(
+  (accumulator, currentValue) =>  {
+
+    console.log('acc:', accumulator, 'val: ', currentValue);
+    accumulator.push(currentValue);
+    return accumulator;
+
+  },
+  []
+);
+
+// console.log(sumWithInitial);
+
+let string = 'kayak'
+
+
+let result1= [...string].reduce((obj, letter) => {
+  // console.log(obj, letter);
+
+  /*
+  'k a y a k'
+  { k:2, a:2, y:1,  }
+
+  */
+  if(obj[letter]) {
+    obj[letter] += 1;
+  } else {
+    obj[letter] = 1;
+  };
+
+  return obj;
+
+}, {})
+console.log(result1);
+
+let obj = {a:1}
+console.log('===>',obj.a)
+
+console.log(`[1,2,3]` == `[1,2,3]`);
+// reference1  -> [];
+// reference2 -> [];
+// reference1 == reference2
