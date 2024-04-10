@@ -40,21 +40,40 @@ let strings = ["a", "an", "array", "of", "string"];
 // console.log(upperCased);
 // [ 'A', 'AN', 'ARRAY', 'OF', 'STRING' ]
 
-const words = ["spray", "elite", "exuberant", "destruction", "present"];
+let words = ["spray", "elite", "exuberant", "destruction", "present"];
 
 const result = words.filter(function (word) {
 
   // console.log(word);
   let count = 0;
-  [...word].forEach(letter => {
+  //spray -> ['s','p','r','a','y']
+  // [...word]
+  word.split('').forEach(letter => {
     if(letter === 'e')count++;
   })
   return count >= 2;
 });
 
-console.log(result);
+// console.log(result);
 // const ['exuberant', destruction, present] =
 // words.filter( ('present') => 'present'.length > 6 );
 
 // console.log(result);
 // Expected output: Array ["exuberant", "destruction", "present"]
+
+
+const array3 = [5, 12, 8, 130, 44];
+
+
+const found = array3.reverse().find((element) => element > 10);
+// const 12 = [5, 12, 8, 130, 44].find((12) => 12 > 10);
+
+// console.log(found);
+// Expected output: 12
+
+
+words = ["spray", "elite", "exuberant", "destruction", "present"];
+
+
+// let foundWord = words.find((word) => word.startsWith('d'));
+// console.log(foundWord);
