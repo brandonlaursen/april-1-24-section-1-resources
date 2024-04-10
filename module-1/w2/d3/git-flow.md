@@ -29,7 +29,10 @@ npx tiged https://github.com/appacademy/aa02-advanced-array#full-time aa02-advan
   `node_modules` or `node_modules/`
 - run `npm install`
 ## Connect the repo to github
-Could also copy paste the commands from github
+- Copy paste the commands from github
+ ![image info](./git-hub.png)
+### Alternative
+Do if you decide not to copy paste commands
 - `git init`
 - `git add README.md`
 - `git commit -m "first commit"`
@@ -38,7 +41,7 @@ Could also copy paste the commands from github
   - Note: replace with your url from github
 - `git push -u origin main`
 
-Push up files to the repo
+After copy pasting the commands, Push up files to the repo
 - `git add .`
 - `git commit -m ‘message’`
 - `git push`
@@ -67,6 +70,8 @@ Anytime you make changes and want to swap driver and navigator roles
 ## Pair
 - `git pull`
 
+
+You will run into a git conflict if both collaborators work on the project as the same time. Only the driver should be working in the project till roles are swapped.
 
 ## If you get this error:
 ```
