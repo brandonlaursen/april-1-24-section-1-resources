@@ -10,19 +10,33 @@ Look at the example test cases to see how this function is invoked:
 
 function sundaeOrder() {
   // Your code here
+  // let string = "A bowl of ice cream with hot fudge";
+  let toppings = ['hot fudge'];
 
-  return function (topping) {
+  return function (...topping) {
     // Your code here
+    // string += ` and ${topping}`
+    // // let string2 = string + ' and ' + topping;
+    // return string
+    let string = 'A bowl of ice cream with ';
+    // toppings.push(topping);
+    console.log(topping)
+    let newTopping = topping.join(' and ');
+    console.log(newTopping);
+    return string + toppings.join(' and ') + ' ' + newTopping;
   };
 }
 
 const sundae1 = sundaeOrder(); // => returns a function
-console.log(sundae1("nuts")) // => "A bowl of ice cream with hot fudge and nuts"
-console.log(sundae1("caramel")) // => "A bowl of ice cream with hot fudge and nuts and caramel"
+// console.log(sundae1);// [Function (anonymous)]
+// console.log(sundae1("nuts")) // => "A bowl of ice cream with hot fudge and nuts"
+// console.log(sundae1("caramel")) // => "A bowl of ice cream with hot fudge and nuts and caramel"
 
-const sundae2 = sundaeOrder(); // => returns a function
-console.log(sundae2("banana")) // => "A bowl of ice cream with hot fudge and banana"
+// const sundae2 = sundaeOrder(); // => returns a function
+// console.log(sundae2("banana")) // => "A bowl of ice cream with hot fudge and banana"
 
+const sundae3 = sundaeOrder();
+console.log(sundae3('caramel', 'nuts'));
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 
