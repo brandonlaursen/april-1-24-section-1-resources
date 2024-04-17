@@ -19,7 +19,7 @@ function range(start, end, arr = []) {
   // if(end <= start) return [];
 
   arr.push(start)
-  return range(start + 1, end, arr)
+  return range(start + 1, end, arr) + range(start, end);
   // return [...range(start, --end), end];
   // let recurse = range(start, --end);
   // recurse.push(end);
