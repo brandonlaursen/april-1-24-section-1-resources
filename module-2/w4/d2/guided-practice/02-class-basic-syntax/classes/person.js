@@ -18,17 +18,20 @@ class Person {
   };
 
   static introducePeople(people){
+    // console.log('===>',people)
     if(!Array.isArray(people)){
       throw new Error( "introducePeople only takes an array as an argument.")
     }
 
-    for(let person of people) {
+    for(const person of people) {
       if(!(person instanceof Person)) {
         throw new Error( "All items in array must be Person class instances.")
+      } else {
+        person.introduce()
       }
     }
 
-    people.forEach(person => person.introduce());
+    // people.forEach(person => person.introduce());
   }
 
 }
