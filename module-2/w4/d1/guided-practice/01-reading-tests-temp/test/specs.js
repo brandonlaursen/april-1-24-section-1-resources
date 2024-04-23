@@ -67,13 +67,13 @@ describe("myRange(min, max, step)", () => {
       const [min1, max1] = [0, 5];
       const [min2, max2] = [6, 3];
 
-      const actual1 = myRange(min1, max1);
-      const expected1 = [0, 1, 2, 3, 4, 5];
-      const actual2 = myRange(min2, max2);
-      const expected2 = [];
+      // const actual1 = myRange(min1, max1);
+      // const expected1 = [0, 1, 2, 3, 4, 5];
+      // const actual2 = myRange(min2, max2);
+      // const expected2 = [];
 
-      expect(actual1).to.eql(expected1);
-      expect(actual2).to.eql(expected2);
+      expect( myRange(min1, max1)).to.eql([0, 1, 2, 3, 4, 5]);
+      expect( myRange(min2, max2)).to.eql([]);
     });
   });
 
