@@ -26,10 +26,13 @@ const harley = new Motorcycle('Harley', 'harley davidson', 'sportster', 50);
 
 
 class Bicycle extends Motorcycle{
-
+  constructor(name){
+    super(name);
+    this.name = name;
+  }
 }
 
-const bike = new Bicycle('speed','sschwin', 'beach crusier', '?');
+const bike = new Bicycle('beach crusier');
 console.log(bike)
 
 // console.log(harley.makeNoise());
