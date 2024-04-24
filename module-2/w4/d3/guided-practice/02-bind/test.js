@@ -4,7 +4,10 @@ const Employee = require('./employee');
 
 const john = new Employee('John Wick', 'Dog Lover');
 
-setTimeout(() => john.sayName(), 2000);
+// let func = john.sayName;
+// setTimeout(john.sayName, 2000);
+
+setTimeout(john.sayName, 2000);
 
 // context is setTimeout object
 // not bound!

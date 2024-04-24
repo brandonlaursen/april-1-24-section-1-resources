@@ -1,3 +1,4 @@
+"use strict";
 function eat() {
   console.log(`${this.name} eats fish food`);
 }
@@ -8,6 +9,7 @@ class Fish {
   }
 
   swim() {
+    // "use strict";
     console.log(`${this.name} swimming in the water`);
   }
 }
@@ -15,7 +17,7 @@ class Fish {
 const nemo = new Fish('Nemo');
 
 /********************************* Scenario 1 *********************************/
-// eat(); //  accessing global object, it does not have a key name
+eat(); //  accessing global object, it does not have a key name
 
 
 /********************************* Scenario 2 *********************************/
@@ -30,9 +32,11 @@ const nemo = new Fish('Nemo');
 
 
 /********************************* Scenario 4 *********************************/
-nemo.swim(); // the nemo object is calling the swim method
+// nemo.swim(); // the nemo object is calling the swim method
 
 
 /********************************* Scenario 5 *********************************/
 // const swim = nemo.swim;
 // swim(); // ?
+const eat1 = eat;
+// eat1();
