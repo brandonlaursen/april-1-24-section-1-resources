@@ -1,13 +1,16 @@
+
+
+
 function isFive(num) {
-  // Your code here 
+  // Your code here
 }
 
 function isOdd(number) {
-  // Your code here 
+  // Your code here
 }
 
 function myRange(min, max, step = 1) {
-  // Your code here 
+  // Your code here
 }
 
 
