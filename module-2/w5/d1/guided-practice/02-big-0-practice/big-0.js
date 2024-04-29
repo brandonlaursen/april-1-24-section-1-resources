@@ -1,8 +1,9 @@
 animals = ['alligator', 'bear', 'cat', 'dog', 'elephant', 'fish', 'goose', 'hamster', 'iguana', 'jaguar', 'kangaroo'];
 
 // Count how many animals are in the list
-// Time complexity: O(?)
-// Space complexity: O(?)
+// * array could be varying length; we dont know
+// * Time complexity: O(n)
+// * Space complexity: O(1)
 function countAnimals(animals) {
   let count = 0;
   for (let i = 0 ; i < animals.length ; i++) {
@@ -12,15 +13,16 @@ function countAnimals(animals) {
 }
 
 // Count how many animals are in the list
-// Time complexity: O(?)
-// Space complexity: O(?)
+// * Time complexity: O(1)
+// * Space complexity: O(1)
+// * keying into object is an o(1) operation
 function countAnimals2(animals) {
   return animals.length;
 }
 
 // Print the first 10 animals in the list
-// Time complexity: O(?)
-// Space complexity: O(?)
+// * Time complexity: O(1)
+// * Space complexity: O(1)
 function printTenAnimals(animals) {
   if (animals.length < 10) {
     throw Error("not enough animals")
@@ -39,8 +41,8 @@ function printTenAnimals(animals) {
 }
 
 // Print out all the animals
-// Time complexity: O(?)
-// Space complexity: O(?)
+// Time complexity: O(n)
+// Space complexity: O(1)
 function printAnimals(animals) {
   for (let i = 0 ; i < animals.length ; i++) {
     console.log(animals[i]);
@@ -48,8 +50,9 @@ function printAnimals(animals) {
 }
 
 // Print out all the animals twice
-// Time complexity: O(?)
-// Space complexity: O(?)
+// * adjacent for loops
+// Time complexity: O(n)
+// Space complexity: O(1)
 function printAnimalsTwice(animals) {
   for (let i = 0 ; i < animals.length ; i++) {
     console.log(animals[i]);
@@ -60,8 +63,9 @@ function printAnimalsTwice(animals) {
 }
 
 // Print all possible pairs of animals
-// Time complexity: O(?)
-// Space complexity: O(?)
+// * n amount of work n amount of times
+// * Time complexity: O(n^2)
+// * Space complexity: O(1)
 function printAnimalPairs(animals) {
   for (let i = 0 ; i < animals.length ; i++) {
     for (let j = 0 ; j < animals.length ; j++) {
@@ -71,8 +75,11 @@ function printAnimalPairs(animals) {
 }
 
 // Return an array containing all possible pairs of animals
-// Time complexity: O(?)
-// Space complexity: O(?)
+// * Time complexity: O(n^2)
+// * Space complexity: O(n^2)
+// * creating n arrays n amount of times
+// * doesnt matter if arrays or just numbers
+// * inner array is negligible compared to the outer array
 function getAnimalPairs(animals) {
   const pairs = [];
   for (let i = 0 ; i < animals.length ; i++) {
@@ -85,8 +92,8 @@ function getAnimalPairs(animals) {
 
 
 // Return an array containing all possible pairs of animals
-// Time complexity: O(?)
-// Space complexity: O(?)
+// * Time complexity: O(n^3)
+// * Space complexity: O(n^3)
 function getAnimalTriples(animals) {
   const triples = [];
   for (let i = 0 ; i < animals.length ; i++) {
@@ -101,8 +108,8 @@ function getAnimalTriples(animals) {
 
 // Returns the index of the animal if it is in the array
 // Returns -1 if it is not in the array
-// Time complexity: O(?)
-// Space complexity: O(?)
+// * Time complexity: O(n)
+// * Space complexity: O(1)
 function findAnimal(animals, target) {
   for (let i = 0 ; i < animals.length ; i++) {
     if (animals[i] === target) return i;

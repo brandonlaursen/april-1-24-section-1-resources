@@ -164,15 +164,12 @@ function createMatrix(max){ //O(n^2)
 const transformArr = (arr) => arr.map(x => x*2);
 ```
 
-## `Timing Benchmarks Practice - 45m (Solo)`
+## `Timing Benchmarks Practice - 45m (Solo, group, or paired)`
 
 ## `Timing Benchmarks Practice Walkthrough`
 
-## `Big-O Practice (Solo)`
+## `Big-O Practice + Array Methods-big-O - Big O - 1h(Solo, group, or paired)`
 
-## `Big-O Practice Walkthrough (Solo)`
+## `Big-O Practice + Array Methods-big-O Walkthrough `
 
-## `Array Methods - Big O (Solo)`
-## `Array Methods - Big O Walkthrough (Solo)`
-
-## `Array Methods Long Practice till EOD(Solo)`
+## `Array Methods Long Practice till EOD(Solo, group, or paired)`
