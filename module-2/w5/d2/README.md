@@ -60,7 +60,7 @@ A binary digit is called a bit. 8 binary digits are called a byte
 0b0111 -> 7;
 0b1000 -> 8;
 0b1001 -> 9;
-0b1001 -> 10;
+0b1010 -> 10;
 0b1011 -> 11;
 0b1100 -> 12;
 0b1101 -> 13;
