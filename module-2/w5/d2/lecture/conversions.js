@@ -113,4 +113,179 @@ convert base10/decimal to base 2/binary
 
   Ob11001010 0b 11001010
 
+
+
+  Converting from binary/hex to decimal
+  * Also used to count in decimal
+  * Formula
+  * Find out what are we converting between
+  * Assign each value to index
+    * Left to right starting with 0
+  * Raise base to the current index
+  * Take result and multiply by value at index
+  * Sum results
+
 */
+
+
+const binary = 'Ob11001010';
+
+
+function binaryToDecimal(binaryStr){
+
+  binaryStr = binaryStr.substring(2);// 11001010
+
+  binaryStr = binaryStr.split('').reverse().join('');// 01010011
+
+  let sum = 0;
+  for(let i =0; i < binaryStr.length; i++){
+
+    // base ^ i * value
+    let num = Math.pow(2, i) * parseInt(binaryStr[i]);
+
+    sum += num;
+  }
+
+  return sum;
+}
+
+
+
+//  console.log(binaryToDecimal(binary));
+
+console.log(parseInt(11001010, 2));// 202
+
+let decimal = parseInt(11001010, 2);
+
+// convert from decimal to binary
+// decimalNum.toString(radix);
+// console.log('0b' + decimal.toString(2));// 11001010
+
+
+
+/*
+
+
+  Base 16 - hexadecimal
+  prepend 0x
+
+  Digit 0 -9
+  A = 10
+  B - 11
+  C - 12
+  D - 13
+  E - 14
+  F - 15
+
+
+  Convert hex - decimal
+
+    Converting from binary/hex to decimal
+  * Also used to count in decimal
+  * Formula
+  * Find out what are we converting between
+  * Assign each value to index
+    * Left to right starting with 0
+  * Raise base to the current index
+  * Take result and multiply by value at index
+  * Sum results
+
+
+    0x A1 = 161
+
+    Index =  1     0
+    b^i      16^1   16^0
+    value    10     1
+    b^i*v    160    1
+    sum result = 160 + 1 = 161
+
+
+  - Converting from decimal to binary/hex
+  * Formula
+  * Find out what we are converting between
+  * Take decimal value and divide by base(either 2 or 16)
+  * Note the remainder
+  * Keep doing so till decimal value cannot be divided
+  * Starting from last value
+  * concatenate values and append proper pre-fix: 0b or 0x
+
+    Convert decimal to hexadecimal
+
+  convert 161 -> A1
+  161 / 16 = 10 - R1
+  10 / 16  = 0 - R10 <- left most digit
+
+  OxA1
+
+
+  function
+
+
+  Digit 0 -9
+  A = 10
+  B - 11
+  C - 12
+  D - 13
+  E - 14
+  F - 15
+
+
+
+*/
+
+const hexChars = {
+  A:10,
+  B:11,
+  C:12,
+  D:13,
+  E:14,
+  F:15
+}
+
+let hex = 'Ox A1';
+function hexToDecimal(hexStr) {
+
+    hexStr = hexStr.substring(2);// A1
+    hexStr = hexStr.split('').reverse().join('');// 1A
+
+    let sum = 0;
+
+    for(let i = 0; i < hexStr.length; i++){
+
+      if(hexChars[hexStr[i]]){
+        // 16^ 1 = 16 * 10 = 160
+        let num = Math.pow(16, i) * hexChars[hexStr[i]];
+        sum += num;
+      } else {
+        let num = Math.pow(16, i) * parseInt(hexStr[i]);// 1
+        sum += num;
+      }
+    };
+
+    // 1 + 160 = 161
+    return sum;
+};
+
+
+console.log(hexToDecimal(hex))// 161
+
+
+//parseInt
+console.log(parseInt('0xA1', 16))// 161
+let decimal2 = parseInt('0xA1', 16);//161
+
+// console.log('0x' + decimal2.toString(16));
+
+
+
+// fromCharCode
+
+console.log(String.fromCharCode(65));// A
+console.log(String.fromCharCode(66));// B
+console.log(String.fromCharCode(67));// C
+
+const str = 'ABC';
+
+console.log(str.charCodeAt(0));// 65
+console.log(str.charCodeAt(1));// 66
+console.log(str.charCodeAt(2));// 67
