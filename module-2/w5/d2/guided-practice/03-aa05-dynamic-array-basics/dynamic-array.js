@@ -44,16 +44,20 @@ class DynamicArray {
     // if(this.capacity <= this.length) resize();
 
 
-    for(let i = this.length; i > 0; i--) {
+    // for(let i = this.length; i > 0; i--) {
 
-      this.data[i] = this.data[i - 1];
-      console.log(this.data);
+    //   this.data[i] = this.data[i - 1];
+    //   console.log(this.data);
+    // }
+
+    // this.data[0] = val;
+    // this.length++;
+    // console.log(this.data);
+    // return this.length;
+
+    for(let i = 0; i < this.length; i++){
+      console.log(this.data[i]);
     }
-
-    this.data[0] = val;
-    this.length++;
-    console.log(this.data);
-    return this.length;
   }
 
 }
@@ -61,9 +65,8 @@ class DynamicArray {
 const dynamicArr = new DynamicArray(4);
 dynamicArr.unshift(1);
 dynamicArr.unshift(2);
-console.log(dynamicArr.unshift(3));
-dynamicArr.unshift(4);
-dynamicArr.unshift(5);
+dynamicArr.unshift(3);
+
 
 // console.log(dynamicArr.read(1));
 
