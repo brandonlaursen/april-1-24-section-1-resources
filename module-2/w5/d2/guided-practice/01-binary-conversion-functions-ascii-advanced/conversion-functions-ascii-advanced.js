@@ -2,39 +2,43 @@
 Implement these functions to convert values into the appropriate number base.
 Consult documentation on how to utilize the following methods:
   parseInt()
+  * binary -> decimal
+  * hex -> decimal
   toString()
+  * decimal > binary
+  * decimal > hex
   String.fromCharCode()
   charCodeAt()
 */
 
 /* Base 2 to base 16 */
 function binaryToHexadecimal(blob) {
-  // Your code here 
+  // Your code here
 }
 
 /* Base 16 to base 2 */
 function hexadecimalToBinary(blob) {
-  // Your code here 
+  // Your code here
 }
 
 /* Base 10 to ASCII */
 function decimalToAscii(blob) {
-  // Your code here 
+  // Your code here
 }
 
 /* Base 2 to ASCII */
 function binaryToAscii(blob) {
-  // Your code here 
+  // Your code here
 }
 
 /* Base 16 to ASCII */
 function hexadecimalToAscii(blob) {
-  // Your code here 
+  // Your code here
 }
 
 /* ASCII to base 10 */
 function asciiToDecimal(blob) {
-  // Your code here 
+  // Your code here
 }
 
 // console.log('Binary to hexadecimal:')

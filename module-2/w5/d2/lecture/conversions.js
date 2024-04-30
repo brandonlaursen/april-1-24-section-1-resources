@@ -271,7 +271,7 @@ console.log(hexToDecimal(hex))// 161
 
 
 //parseInt
-console.log(parseInt('0xA1', 16))// 161
+console.log('==',parseInt('A1', 16))// 161
 let decimal2 = parseInt('0xA1', 16);//161
 
 // console.log('0x' + decimal2.toString(16));
@@ -280,12 +280,12 @@ let decimal2 = parseInt('0xA1', 16);//161
 
 // fromCharCode
 
-console.log(String.fromCharCode(65));// A
-console.log(String.fromCharCode(66));// B
-console.log(String.fromCharCode(67));// C
+// console.log(String.fromCharCode(65));// A
+// console.log(String.fromCharCode(66));// B
+// console.log(String.fromCharCode(67));// C
 
-const str = 'ABC';
+// const str = 'ABC';
 
-console.log(str.charCodeAt(0));// 65
-console.log(str.charCodeAt(1));// 66
-console.log(str.charCodeAt(2));// 67
+// console.log(str.charCodeAt(0));// 65
+// console.log(str.charCodeAt(1));// 66
+// console.log(str.charCodeAt(2));// 67
