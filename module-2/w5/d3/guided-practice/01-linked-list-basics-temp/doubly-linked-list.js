@@ -41,7 +41,9 @@ class DoublyLinkedList {
 
   addToTail(val) {
     // Your code here
+    // LL = { tail:{val: 2, next: null, prev: {val: 1, next: null, prev: null}}, head: {val: 1, next: null, prev: null}, length: 2}
 
+    // {val: 2, next: null, prev: null}
     const newNode = new DoublyLinkedListNode(val);
 
       if(this.length >= 1) {
