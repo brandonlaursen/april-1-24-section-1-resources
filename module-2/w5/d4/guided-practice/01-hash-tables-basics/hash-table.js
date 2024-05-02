@@ -52,17 +52,50 @@ class HashTable {
 
   insertWithHashCollisions(key, value) {
     // Your code here
+
+    const index = this.hashMod(key);
+    const newPair  = new KeyValuePair(key, value);
+
+    if(!this.data[index]) {
+      this.data[index] = newPair;
+
+    } else {
+     // taking the newPair and pointing its next at the current pair at that positions
+     newPair.next = this.data[index];
+     this.data[index] = newPair;
+    }
+    this.count++;
   }
 
   insert(key, value) {
-    // Your code here
+    // Three routes
+    // * Nothing at the index; insert key
+    // * key exists already so we overwrite the value
+    // * key doesnt exists so we add it the linked list; pointing the newPair at the pair already in that bucket
+    const index = this.hashMod(key);
+    let currentPair = this.data[index];
 
-    // run key through hash mod function and get index
-    // see if their is a current pair at the index
-    // iterate to check if the current pair exists and is not the key
-    // if current pair exists, overwrite the value
-    // if its doesnt create the key/value pair and if the position is empty, set the pair at the position
-    // if we traverse and dont find the key, then add the key-value pair to the head and point at old head
+
+    while(currentPair && currentPair.key !== key) {
+      currentPair = currentPair.next;
+    };
+
+
+    if(currentPair) {
+      currentPair.value = value;
+    } else {
+
+      const newPair = new KeyValuePair(key, value);
+
+      if(!this.data[index]) {
+        this.data[index] = newPair;
+      } else {
+        newPair.next = this.data[index];
+        this.data[index] = newPair;
+      };
+
+      this.count++;
+    }
   }
 
 }
