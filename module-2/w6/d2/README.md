@@ -72,25 +72,6 @@ This algorithm sorts values using the following divide and conquer approach:
 
 ![big-o-comparison](./big-O-chart.svg)
 
-// * Linear search
-// return index of target
-function linearSearch(arr, target) {
-
-  // ? Can you solve this in one line?
-  // for (let i = 0; i < arr.length; i++) {
-  //   if (arr[i] === target) return i;
-  // }
-  // return -1;
-  //
-
-  return arr.indexOf(target);
-};
-
-// linearSearch([2,4,6,8], 6);  // 2
-// linearSearch([2,4,6,8], 10);  // -1
-
-
-/*
 
 ## What is a Logarithm?
   * inverse of an exponent

@@ -90,6 +90,9 @@ for (let i = arr2.length - 1; i > 0; i--) {
 ```
 
 ## Bubble Sort
+
+Bubble Sort repeatedly traverses the array, comparing adjacent elements and swapping them if they are in the wrong order, effectively "bubbling" the largest unsorted element to its correct position at the end of each traversal. This process repeats, each time decrementing the range of comparison, until there is nothing left to sort.
+
   * Time complexity -
     * Worst case - O(n^2)
     * Best case - O(n^2)
@@ -97,13 +100,21 @@ for (let i = arr2.length - 1; i > 0; i--) {
   * Space complexity -
     * O(1) - In place
 
-  BubbleSort Pseudocode
-  * Walk through the entire array, comparing each adjacent pair.
-  * If they are out of order, swap their positions.
-  * Keep doing this until the entire array is sorted.
-  * Each pass will sort the array a bit more, with the larger values "bubbling up" to the top.
+  ### BubbleSort Pseudocode
+  ```js
+    // Iterate through the array
 
-   Bubble Sort repeatedly traverses the array, comparing adjacent elements and swapping them if they are in the wrong order, effectively "bubbling" the largest unsorted element to its correct position at the end of each traversal. This process repeats, each time decrementing the range of comparison, until there is nothing left to sort.
+    // If the current value is greater than its neighbor to the right
+    // Swap those values
+
+    // Do not move this console.log
+    console.log(arr.join(","));
+
+    // If you get to the end of the array and no swaps have occurred, return
+
+    // Otherwise, repeat from the beginning
+  ```
+
 
 ## `Practice: Bubble Sort 30m(SOLO)`
 
@@ -111,6 +122,9 @@ for (let i = arr2.length - 1; i > 0; i--) {
 
 
 ## `Insertion sort`
+
+  Insertion Sort sorts an array by sequentially inserting each element into its proper position within the initially empty sorted portion. It compares each element with those in the sorted section, shifting elements one position right to make space, thereby gradually extending the sorted array until completion.
+
   * Time complexity -
     * Worst case - O(n^2)
     * Best case - O(n) <- possible if already sorted depends on implementation
@@ -118,18 +132,33 @@ for (let i = arr2.length - 1; i > 0; i--) {
     * O(n) - Out of place
     * O(1) - In place
 
-### Insertion sort Pseudocode
     * similar to sorting playing cards
     * great to work with linked list
     * real world example - file search, data compression, path finding
 
-### Make sure to make a copy
+### Insertion sort Pseudocode
+```js
+/*
+  Copy the original array
+  Create an array to store the sorted values
+  While the array is not empty:
+  - make sure you have a console.log(sorted.join(',')) as your first line in the while loop
+  - Pop a value from the array
+  - Create a new spot at the end of the array with null to help with comparisons
+  - Walk through the sorted array in reverse order
+  - Check if the value to the left is smaller than the new value
+  - If so, you've reached the insertion point so exit the loop
+  - If not shift the value to the right by 1 and continue
+  - Insert the unsorted value at the break point
+  Return the sorted array
+*/
+```
+
+
+### Make sure to make a copy for out of place
     * how can we make a copy?
     * how can we can add null to the end of an array? push null
     * iterate backwards and shift things to the right
-
-
-    Insertion Sort sorts an array by sequentially inserting each element into its proper position within the initially empty sorted portion. It compares each element with those in the sorted section, shifting elements one position right to make space, thereby gradually extending the sorted array until completion.
 
 
 ## `Practice: Insertion Sort 30m(SOLO)`
@@ -138,6 +167,10 @@ for (let i = arr2.length - 1; i > 0; i--) {
 
 
 ## Selection sort
+
+  Selection Sort separates the array into sorted and unsorted sections. It repeatedly finds the smallest (or largest) element in the unsorted section and transfers it to the end of the sorted section. This process is repeated until all elements are moved to the sorted section, growing the sorted portion one element at a time.
+
+
   * Time complexity -
     * Worst case - O(n^2)
     * Best case - O(n^2)
@@ -146,7 +179,30 @@ for (let i = arr2.length - 1; i > 0; i--) {
     * O(n) - Out of place
     * O(1) - In place
 
-  Main differences: Selection sort scans the unsorted part to find the minimum element, while insertion sort scans the sorted part to find the correct position to place the element. Selection sort requires fewer swaps than insertion sort, but more
+
+
+
+### Selection Sort Pseudocode
+```js
+  // Copy the original array
+
+  // Create an array to store the sorted values
+
+  // While the array is not empty...
+
+  // Do not move this console.log
+  console.log(sorted.join(","));
+
+  // Find the index of the minimum value in the unsorted half
+
+  // Save and remove the value at the min index
+
+  // Add the min value to the end of the sorted array
+
+```
+### Insertion vs Selection Sort
+### Main differences:
+Selection sort scans the unsorted part to find the minimum element, while insertion sort scans the sorted part to find the correct position to place the element. Selection sort requires fewer swaps than insertion sort, but more
 
 ## `Practice: Selection Sort 30m(SOLO)`
 
