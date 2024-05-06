@@ -1,3 +1,33 @@
+/*
+
+
+
+
+  Insertion sort
+  * Time complexity -
+    * Worst case - O(n^2)
+    * Best case - O(n) <- possible if already sorted depends on implementation
+  * Space complexity -
+    * O(n) - Out of place
+    * O(1) - In place
+
+  Insertion sort
+    * similar to sorting playing cards
+    * great to work with linked list
+    * real world example - file search, data compression, path finding
+
+  Make sure to make a copy
+    * how can we make a copy?
+    * how can we can add null to the end of an array? push null
+    * iterate backwards and shift things to the right
+
+
+  Insertion Sort sorts an array by sequentially inserting each element into its proper position within the initially empty sorted portion. It compares each element with those in the sorted section, shifting elements one position right to make space, thereby gradually extending the sorted array until completion.
+  
+
+*/
+
+
 // Insertion Sort out-of-place
 // Do not modify the original array
 function insertionSort(arr) {
@@ -18,7 +48,7 @@ function insertionSort(arr) {
   Return the sorted array
   */
 
-  // Your code here 
+  // Your code here
 }
 
 // In-place Insertion Sort
@@ -40,7 +70,7 @@ function insertionSortInPlace(arr) {
   Return the mutated array
   */
 
-  // Your code here 
+  // Your code here
 }
 
 module.exports = [insertionSort, insertionSortInPlace];

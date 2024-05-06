@@ -1,3 +1,24 @@
+/*
+
+! Think of selecting elements and placing them in a sorted or unsorted half
+
+
+  Selection sort
+    * Time complexity -
+      * Worst case - O(n^2)
+      * Best case - O(n^2)
+        * Even if the array has already been sorted, our algorithm looks for the minimum in the rest of the array.
+    * Space complexity -
+      * O(n) - Out of place
+      * O(1) - In place
+
+  Selection Sort separates the array into sorted and unsorted sections. It repeatedly finds the smallest (or largest) element in the unsorted section and transfers it to the end of the sorted section. This process is repeated until all elements are moved to the sorted section, growing the sorted portion one element at a time.
+
+
+  Main differences: Selection sort scans the unsorted part to find the minimum element, while insertion sort scans the sorted part to find the correct position to place the element. Selection sort requires fewer swaps than insertion sort, but more
+
+  
+*/
 
 
 function selectionSort(arr) {
