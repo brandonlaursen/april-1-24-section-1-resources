@@ -9,10 +9,181 @@
 - Matrixes Demo
 - Problem Solving Approach Demo
 
+
+# Graphs
+
+
+## Graphs
+  * Graphs are an abstract data type that represent a collection of nodes and edges.
+  * Graphs represent relationships between objects.
+  * do not necessarily have a starting node
+  * many different types of graphs
+  * Represent graphs with integers values
+
+## All are forms of graphs
+  * singly linked list
+  * doubly linked list
+  * binary trees
+  * binary search trees
+
+## Real world examples
+  * street maps
+  * social networks
+  * internet
+  * decision making trees
+
+## Advantages
+  * finding shortest path between two locations
+  * finding friends of friends on social media app
+  * AI decision making
+  * web crawlers
+
+## Types of graphs
+
+### Directed vs undirected
+  * Directed
+    * may contain arrows to signify direction of relationship between nodes
+    * ex: twitter follows
+      * May follow someone but they don't follow you back
+
+  * Undirected
+    * no arrows means the graphs has a two way relationship between nodes
+      * ex: Facebook Friend
+        * a mutual connection
+
+## Cyclic vs. acyclic
+  * Key difference between tree + graphs, graphs can have cycles, trees cannot
+  * Cyclic
+    * contains at least one cycle
+
+  * Acyclic
+    * contains no cycles
+
+## Weighted vs. Unweighted
+  * Edges can also have weight to them
+    * connection between two nodes
+
+###  Weighted graph
+  * Roads could represent edges between two locations
+  * traffic could impact the distance between two locations
+  * different roads/edges may be weighted differently
+
+### Unweighted graphs
+  * every edge has a weight of 1
+
+We represent graphs with adjacency list
+  * object with a key for each node in the graph with the value of a list of nodes it points to.
+  * No particular order or root node
+  * No duplicate edges - represent using a set
+    * makes checking if two nodes are neighbors O(1) - .has vs .includes - O(n)
+
+### Graph Vocabulary:
+  * `Vertex`: A node in the graph. Vertex and node can be used interchangeably
+  * `Directed edge`: A one-way connection from one vertex to another
+  * `Undirected edge`: A two-way connection between two vertices. Functionally the same as a bidirectional edge
+  * `Bidirectional edge`: A two-way connection between two vertices that can be traversed in either direction
+  * `Edge weight`: The cost of traversing an edge.
+  * `Cyclic/acyclic`: A cyclic graph is a graph with at least 1 cycle, or the potential to have a cycle
+  * `Adjacency list`: A way of representing a graph in code with an object
+
+## Example Adjacency List
+```js
+// ! Drawn them out
+const graph1 = {
+  T: ["V"],
+  U: ["V"],
+  V: [],
+};
+
+const graph2 = {
+  X: ["Y"],
+  Y: ["Z"],
+  Z: ["X"],
+};
+
+const graph3 = {
+  A: new Set(["B", "C", "E"]),
+  B: new Set([]),
+  C: new Set(["B", "D"]),
+  D: new Set([]),
+  E: new Set(["A"]),
+  F: new Set(["E"]),
+};
+```
+### We will talk about matrix's later on today
+* think rows + columns
+
+## Breadth First Graph Traversal
+  * very similar to our approach with trees
+  * We will visit nodes from nearest to furthest
+    * as opposed to going the entire of the depth of the graph
+    ! That would be a depth first graph traversal
+  * key difference is we must keep track of visited nodes
+    * do so using a set
+
+## Memorize approach
+ * Create a queue and enqueue the starting node
+ * Create a set to store visited nodes
+ * While the queue is not empty, repeat steps 4-6
+ * Dequeue the first node
+ * DO THE THING THAT YOU NEED TO FOR THE DEQUEUED NODE
+ * For each unvisited neighbor, add it to the visited nodes and to the back of the queue
+
+### Time complexity O(n)
+ * n is the number if edge and vertices combined 0(v + e) which can be simplified as O(n)
+ * In the breadth-first search algorithm, the nested forEach loop does not directly add complexity to the overall time complexity. This is because the inner forEach loop iterates over the neighbors of each vertex, and the total number of iterations over all adjacent vertices is proportional to the total number of edges in the graph, not the total number of vertices
+ * The time complexity of the inner forEach loop itself is O(E), where E represents the number of edges.
+ * At worst, these traversals check each edge once in a directed graph and twice in an undirected graph.
+
 ## `Refactor Breadth-First Traversal 20min(Solo)`
 ## `Refactor Breadth-First Traversal Walkthrough`
+
+
+## Breadth-First Search
+
+  * Looking for a specific node
+  * What is the thing?
+  * Identical approach to breadth-first traversal
+  * only difference between breath depth traversal and search is that a search stops when we find what were looking for
+  * a traversal we traverse the entire graph
+```js
+// Create a queue and enqueue the starting node
+// Create a set to store visited nodes
+// While the queue is not empty, repeat steps 4-6
+// Dequeue the first node
+// IS THIS NODE THE THING? If so, stop and return a result. Else, continue.
+// For each unvisited neighbor, add it to the visited nodes and to the back of the queue
+// If the queue has become empty without finding the thing, then the thing has not been found. Return false, an error, or a message as appropriate for the problem you are solving.
+```
 ## `Simple Breadth-First Search 20min(Solo)`
 ## `Simple Breadth-First Search Walkthrough`
+
+## Finding the shortest path
+  * One of the most common and useful uses of a breadth-first search
+  * Modify a breadth-first search so that it records A shortest path
+    * May be more than one shortest path
+
+## Path can be used to:
+   * A shortest path between two nodes
+   * The degree of separation between two nodes
+   * How to get from a starting node to all reachable nodes
+
+
+### Approach is very similar to breath-first-search
+```js
+// Create a queue. Create a separate array containing the starting node. Enqueue this array. The enqueued array is the current path.
+// Create a set to store visited nodes
+
+// While the queue is not empty, repeat steps 4-6
+// Dequeue the first path, and save it in a variable
+// Save the last node in the path in a variable (DO NOT pop it)
+// IS THIS NODE THE THING? If so, stop and return a result. Else, continue.
+// For each unvisited neighbor of the last node:
+// Add it to the visited nodes set
+// Copy the saved path, and add the neighbor to the end. Enqueue this new path
+// If the queue has become empty without finding the thing, then the thing has not been found. Return false
+```
+
 ## `A Shortest Path 20min(Solo)`
 ## `A Shortest Path Walkthrough`
 ## `Degrees of Separation 20min(Solo)`
