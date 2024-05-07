@@ -1,10 +1,38 @@
-# `Week 6 Day 1`
+# `Week 6 Day 2`
 
-- Binary Search Practice
+
 - Merge Sort Practice
 - Quicksort Practice
+- Binary Search Practice
 
 ## `Cameras On Reminder`
+
+
+
+
+## Merge sort
+  * Merge sort is the first of the efficient algorithms you will learn.
+
+  * Merge sort operates with a much better time complexity than the more naive approaches we started with.
+
+### The main ideas of merge sort are:
+  * 1. It is easy to merge elements of two sorted arrays into a single sorted array
+  * 2. You can consider an array containing only a single element as already sorted
+  * 3. You can also consider an empty array as sorted
+
+### Time Complexity
+  * Best case: O(n log n)
+  * Worst case: O(n log n)
+## Space complexity
+  * O(n) - proportional to size of call stack
+
+This algorithm sorts values using the following divide and conquer approach:
+  * Split the unsorted array in half (divide)
+  * Sort the halves (conquer)
+  * Merge the newly sorted halves
+## `Practice: Mergesort 45m`
+
+## `Mergesort Walkthrough`
 
 
 ## `Quick sort`
@@ -39,63 +67,36 @@
 
  When the partitioning algorithm always chooses the middle element or near the middle element as the pivot
 
-## `Practice: Quicksort (SOLO, 1h)`
+## `Practice: Quicksort 30m`
 
 ## `Quicksort Walkthrough`
 
-
-## Merge sort
-  * Merge sort is the first of the efficient algorithms you will learn.
-
-  * Merge sort operates with a much better time complexity than the more naive approaches we started with.
-
-### The main ideas of merge sort are:
-  * 1. It is easy to merge elements of two sorted arrays into a single sorted array
-  * 2. You can consider an array containing only a single element as already sorted
-  * 3. You can also consider an empty array as sorted
-
-### Time Complexity
-  * Best case: O(n log n)
-  * Worst case: O(n log n)
-## Space complexity
-  * O(n) - proportional to size of call stack
-
-This algorithm sorts values using the following divide and conquer approach:
-  * Split the unsorted array in half (divide)
-  * Sort the halves (conquer)
-  * Merge the newly sorted halves
-## `Practice: Mergesort (SOLO, 1h)`
-
-## `Mergesort Walkthrough`
-
 ## `Logarithm`
-
-![big-o-comparison](./big-O-chart.svg)
-
 
 ## What is a Logarithm?
   * inverse of an exponent
   * super-efficient
   * The logarithm base-n of a number is how many times it must be divided by n to reach 1
 
-### Exponents
-```
-    * 2^5 === 2 * 2 * 2 * 2 * 2 = 32
-      ? 2 multiplied by itself 5 times is 32
-```
+  ![big-o-comparison](./big-O-chart.svg)
+
+
+
+
 ### Logarithm
   * log base(n)
   * log2(32) = 5
     * How many times would we need to divide 32 by 2 to equal 5
 
-### Binary search
-  * finding an item from a sorted list of items
-  * Time complexity
-    * Average - O(log n)
-    * Best - O(1) <-  find it first try
-  * Space complexity: O(N)
-  * Divide and conquer
 
+### Exponents
+```
+    * 2^5 === 2 * 2 * 2 * 2 * 2 = 32
+      ? 2 multiplied by itself 5 times is 32
+```
+
+
+## Binary Search
 Binary Search utilizes the divide and conquer approach.
   * You've already used this without even knowing...
           ex: Phone books, dictionaries, etc.
@@ -130,7 +131,16 @@ Binary Search utilizes the divide and conquer approach.
   * Logarithmic curves grow so slowly that they are virtually constant.
   * slower than O(1) - constant
   * faster than O(n) - linear
-## `Practice: Binary Search (SOLO, 1h)`
+
+ ## Binary search
+  * finding an item from a sorted list of items
+  * Time complexity
+    * Average - O(log n)
+    * Best - O(1) <-  find it first try
+  * Space complexity: O(N)
+  * Divide and conquer
+
+## `Practice: Binary Search 30min`
 
 ## `Binary Search Walkthrough`
 
