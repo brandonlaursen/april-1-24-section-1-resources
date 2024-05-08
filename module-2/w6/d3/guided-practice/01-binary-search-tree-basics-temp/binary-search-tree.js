@@ -18,22 +18,19 @@ class BinarySearchTree {
     const newNode = new TreeNode(val);
 
     if (!this.root) {
-      this.root = newNode
+      this.root = newNode;
       return;
-    };
+    }
 
-    if(val < currentNode.val) {
-
-      if(!currentNode.left) {
-        currentNode.left = newNode
+    if (val < currentNode.val) {
+      if (!currentNode.left) {
+        currentNode.left = newNode;
       } else {
         this.insert(val, currentNode.left);
       }
-
     } else {
-
-      if(!currentNode.right) {
-        currentNode.right = newNode
+      if (!currentNode.right) {
+        currentNode.right = newNode;
       } else {
         this.insert(val, currentNode.right);
       }
@@ -42,18 +39,46 @@ class BinarySearchTree {
 
   search(val) {
     // Your code here
+
+    let currentNode = this.root;
+
+    while (currentNode) {
+      if (val < currentNode.val) {
+        currentNode = currentNode.left;
+      } else if (val > currentNode.val) {
+        currentNode = currentNode.right;
+      } else {
+        return true;
+      }
+    }
+
+    return false;
   }
 
   preOrderTraversal(currentNode = this.root) {
     // Your code here
+    if (!currentNode) return;
+
+    console.log(currentNode.val);
+    this.preOrderTraversal(currentNode.left);
+    this.preOrderTraversal(currentNode.right);
   }
 
   inOrderTraversal(currentNode = this.root) {
-    // Your code here
+    if (!currentNode) return;
+
+    this.inOrderTraversal(currentNode.left);
+    console.log(currentNode.val);
+    this.inOrderTraversal(currentNode.right);
   }
 
   postOrderTraversal(currentNode = this.root) {
     // Your code here
+    if (!currentNode) return;
+
+    this.postOrderTraversal(currentNode.left);
+    this.postOrderTraversal(currentNode.right);
+    console.log(currentNode.val);
   }
 
   // Breadth First Traversal - Iterative
@@ -67,11 +92,14 @@ class BinarySearchTree {
   }
 }
 
-let bst = new BinarySearchTree();
+bst = new BinarySearchTree();
 bst.insert(4);
 bst.insert(2);
 bst.insert(6);
 bst.insert(1);
-// console.log(bst.root.left);
+bst.insert(3);
+bst.insert(5);
+bst.insert(7);
+console.log(bst.postOrderTraversal());
 
 module.exports = { BinarySearchTree, TreeNode };
