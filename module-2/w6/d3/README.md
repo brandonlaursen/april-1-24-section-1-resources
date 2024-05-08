@@ -227,7 +227,7 @@ function searchBST(root, target) {
 // console.log(searchBST(myTree.root, 27));// false
 ```
 
-## `Binary Tree Search Tree Phase 2 - 30m(SOLO)`
+## `Binary Tree Search Tree Phase 2 - 20m(Solo, group, or paired)`
 ## `Binary Tree Search Tree Phase 2 Walkthrough`
 
 ## Binary Tree Traversal
@@ -301,13 +301,13 @@ function searchBST(root, target) {
   * console.log after the left and right recursive call
 ```
 
-## `Binary Tree Search Tree Phase 3 - 30m(SOLO)`
+## `Binary Tree Search Tree Phase 3 - 30m(Solo, group, or paired)`
 ## `Binary Tree Search Tree Phase 3 Walkthrough`
 
 ### Breadth First Traversal
  * printing nodes at each level before moving to the next
 
-### Depth First Traversal 
+### Depth First Traversal
  * we can imitate a depth first traversal
  * by using a breadthFirstTraversal algo but with a stack
  * not a depth first search its a breadth first search with stack simulating a depthFirstTraversal
@@ -315,7 +315,7 @@ function searchBST(root, target) {
 
 
 
-## `Binary Tree Search Tree Phase 4 - 30m(SOLO)`
+## `Binary Tree Search Tree Phase 4 - 30m(Solo, group, or paired)`
 ## `Binary Tree Search Tree Phase 4 Walkthrough`
 
 ## `Binary Search Tree Long Practice Till EOD(Paired)`
