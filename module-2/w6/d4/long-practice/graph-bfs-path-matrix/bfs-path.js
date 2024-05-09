@@ -40,11 +40,11 @@ matrix1 = [
 ];
 
 // // EXAMPLE TESTS #1. Tests for findNeighbors function
-console.log(findNeighbors([1,1], matrix1)) // Finds all 4 neighbors from an
-// // internal node (left, right, down, up)
-// // [ [ 0, 1 ], [ 2, 1 ], [ 1, 2 ], [ 1, 0 ] ]
+// console.log(findNeighbors([1,1], matrix1)) // Finds all 4 neighbors from an
+// // // internal node (left, right, down, up)
+// // // [ [ 0, 1 ], [ 2, 1 ], [ 1, 2 ], [ 1, 0 ] ]
 
-console.log(findNeighbors([0,0], matrix1)); // Finds two neighbors from a
+// console.log(findNeighbors([0,0], matrix1)); // Finds two neighbors from a
 // // corner node // [ [ 1, 0 ], [ 0, 1 ] ]
 
 console.log(findNeighbors([3,1], matrix1)); // Finds three neighbors from
@@ -82,6 +82,14 @@ function bfsPath(matrix, startNode, endValue) {
 
   return false;
 }
+
+// console.log([1,2] === [1,2]);
+// console.log('1,1' === '1,1');
+
+const newSet = new Set('1,2');// { '1', ',', '2' }
+console.log(newSet.size);// 3
+const newSet2 = new Set(['1,2']);//  { '1,2' }
+console.log(newSet2.size);// 1
 // ***** UNCOMMENT FOR LOCAL TESTING *****
 
 
@@ -89,7 +97,7 @@ function bfsPath(matrix, startNode, endValue) {
 
 // EXAMPLE TESTS #2. Tests for bfsPath function
 
-console.log(bfsPath(matrix1, [0,0], 16)); // can traverse the entire matrix
+// console.log(bfsPath(matrix1, [0,0], 16)); // can traverse the entire matrix
 // returns an array of coordinates with no duplicates:
 
 // [
