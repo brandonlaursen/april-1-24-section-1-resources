@@ -24,11 +24,35 @@ const adjList = {
 }
 
 function degreesOfSeparation(start, end) {
+
+  // Your code here
+  const queue = [[start]];
+  const visited = new Set([start]);
+
+  while(queue.length) {
+    const currPath = queue.shift();// [1]
+    const currNode = currPath[currPath.length - 1];// 1
+
+    if(currNode === end) return currPath.length - 1;
+
+    const neighbors = adjList[currNode];
+
+    neighbors.forEach((neighbor) => {
+
+      // 1 n: 2 + 5
+      if(!visited.has(neighbor)) {
+        queue.push([...currPath, neighbor]);
+        visited.add(neighbor);
+      }
+    })
+  };
+
+  return null;
 }
 
-// console.log(degreesOfSeparation(1, 3)); // -> 2
-// console.log(degreesOfSeparation(5, 2)); // -> 1
-// console.log(degreesOfSeparation(6, 1)); // -> null
+console.log(degreesOfSeparation(1, 3)); // -> 2
+console.log(degreesOfSeparation(5, 2)); // -> 1
+console.log(degreesOfSeparation(6, 1)); // -> null
 
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
