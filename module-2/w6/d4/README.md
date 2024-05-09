@@ -135,7 +135,7 @@ const graph3 = {
  * The time complexity of the inner forEach loop itself is O(E), where E represents the number of edges.
  * At worst, these traversals check each edge once in a directed graph and twice in an undirected graph.
 
-## `Refactor Breadth-First Traversal 20min(Solo)`
+## `Refactor Breadth-First Traversal 15min(Solo)`
 ## `Refactor Breadth-First Traversal Walkthrough`
 
 
@@ -155,7 +155,7 @@ const graph3 = {
 // For each unvisited neighbor, add it to the visited nodes and to the back of the queue
 // If the queue has become empty without finding the thing, then the thing has not been found. Return false, an error, or a message as appropriate for the problem you are solving.
 ```
-## `Simple Breadth-First Search 20min(Solo)`
+## `Simple Breadth-First Search 15min(Solo)`
 ## `Simple Breadth-First Search Walkthrough`
 
 ## Finding the shortest path
@@ -186,9 +186,9 @@ const graph3 = {
 
 ## `A Shortest Path 20min(Solo)`
 ## `A Shortest Path Walkthrough`
-## `Degrees of Separation 20min(Solo)`
+## `Degrees of Separation 15min(Solo)`
 ## `Degrees of Separation Walkthrough`
-## `Social Graph Practice 20min(Solo)`
+## `Social Graph Practice 1h(Solo)`
 ## `Social Graph Practice Walkthrough`
 ## `Matrix Demo`
 ```js
