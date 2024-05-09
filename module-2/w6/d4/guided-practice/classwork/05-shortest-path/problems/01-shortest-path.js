@@ -1,4 +1,4 @@
-/*
+ /*
 One of the most common uses of a breadth-first search is to find a SINGLE
 shortest path from one node to another. Refactor your implementation of
 breadth-first search and use the technique from the reading. If it is possible
@@ -26,7 +26,7 @@ const adjList = {
 }
 
 function shortestPath(start, end) {
-  // Your code here 
+  // Your code here
 }
 
 // console.log(shortestPath(1, 3)); // -> [ 1, 2, 3 ] (One possible solution)
