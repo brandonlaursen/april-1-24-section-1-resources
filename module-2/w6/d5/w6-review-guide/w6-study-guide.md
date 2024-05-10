@@ -1,17 +1,4 @@
 # Week 6 Test Info:
--11 multiple choice
--2 coding problems worth 14 points
-	- tree problem worth 6 points
-	- graph problem worth 8 points
--Total points: 25
--Passing points: 20
--Time allowed: 3.5 hours
--Resources Allowed:
-    -MDN
-    -open.appacademy.io
-    -VSCode
-    -Console
-    -Code you wrote yourself
 
 # What to study for Multiple Choice:
     -Be able to determine the O(n) of a refactored algorithm
