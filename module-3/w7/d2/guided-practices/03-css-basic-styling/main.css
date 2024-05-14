@@ -1,37 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Sans+JP:wght@100..900&family=Pacifico&family=Protest+Revolution&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 h1 {
-    font-size: ;
-    font-family: ;
-    padding: ;
-    margin: ;
-    font-weight: ;
-    text-decoration: ;
-    color: ;
-    background-color: ;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  padding: 20px;
+  margin: 30px;
+  font-weight: bold;
+  text-decoration: wavy underline;
+  color: red;
+  background-color: pink;
 }
 
 h2 {
-    font-size: ;
-    font-family: ;
-    padding: ;
-    margin: ;
-    font-weight: ;
-    color: ;
-    background-color: ;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  padding: 10px;
+  margin: 10px;
+  font-weight: bold;
+  color: blue;
+  background-color: lightgray;
 }
 
 p {
-    font-family: ;
-    font-size: ;
-    padding: ;
-    margin: ;
-    color: ;
-    background-color: ;
+  font-family: serif;
+  font-size: 14px;
+  padding: 6px;
+  margin: 7px;
+  color: black;
+  background-color: gold;
 }
 
 .logo {
-    background-size: cover;
-    background-image: url();
-    background-color: ;
-    height: ;
-    width: ;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: green;
+  background-image: url("https://appacademy.github.io/styleguide/assets/logo/logo-emblem-black-1000.png");
+  width: 200px;
+  height: 100px;
+}
+
+img {
+  width: 600px;
+  height: 300px;
 }
