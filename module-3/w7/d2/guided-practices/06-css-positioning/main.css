@@ -1,5 +1,25 @@
+/* The position property accepts any of the following five values:
+* All properties except for static are used in conjunction with the properties top, right, bottom and left to ultimately determine an element’s position on the page.
+* The top, right, left and bottom properties are all optional, except in the case of a sticky element, which requires at least one of the four properties to be set.
+
+Static - does not use top, left, right, bottom
+  * default position of page elements
+  * A static element is not considered to be positioned on the page, since it will appear normally according to the page flow.
+Relative
+  * The element is positioned relative to its initial place in the page flow.
+Absolute
+  * An absolutely positioned element is removed from the page flow, and other elements around it act like it’s not there.
+Fixed
+  * fixed element is removed from the page flow, like an absolutely positioned element. However, unlike an absolutely positioned element, a fixed element’s position is relative to the <html> document itself and not to an ancestor element.
+ ! Fixed positioning can be useful for things like nav bars, buttons, links, videos, etc. that we want to keep visible as the user scrolls.
+
+Sticky -  needs top, left, right, bottom
+  * sticky element remains in its original position in the page flow, and it is positioned relative to its closest block-level ancestor and any scrolling ancestors
+  * It behaves like a relatively positioned element until the point at which you would normally scroll past it in the viewport. At that scrolling point, the element “sticks” to the page wherever it has been positioned by the top, left, bottom and right properties. */ */
+
+
 html, body {
-    font-family: sans-serif;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .container {
@@ -15,57 +35,65 @@ html, body {
     font-size: 36px;
 }
 
+/*  static*/
 #yellow-box {
     background-color: #ffff00;
     /*/* Fill these in */
-    position: ;
-    bottom: 0;
+    position: static;
+    /* bottom: 0;
     left: 0;
     right: 0;
-    top: 0;
-    z-index: ;
+    top: 0; */
+    z-index: 1;
 }
 
+/* Relative */
 #pink-box {
     background-color: #ff69b4;
     /*/* Fill these in */
-    position: ;
+    position: relative;
     bottom: 0;
     left: 0;
     right: 0;
-    top: 0;
-    z-index: ;
+    top: 100px;
+    z-index: 1;
 }
 
+/* Absolute */
 #blue-box {
     background-color: #00eeee;
     /*/* Fill these in */
-    position: ;
+    position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    top: 0;
-    z-index: ;
+    top: 250px;
+    z-index: 1;
 }
+
+/* Fixed */
 
 #red-box {
     background-color: #ff0000;
     /*/* Fill these in */
-    position: ;
+    position: fixed;
     bottom: 0;
-    left: 0;
+    left: 8px;
     right: 0;
-    top: 0;
-    z-index: ;
+    top: 100px;
+    z-index: 6;
 }
+
+/* sticky */
 
 #orange-box {
     background-color: #ffa500;
     /*/* Fill these in */
-    position: ;
-    bottom: 0;
+    position: sticky;
+    bottom: -30px;
+    display: inline-block;
     left: 0;
     right: 0;
     top: 0;
-    z-index: ;
+    z-index: 5;
 }
