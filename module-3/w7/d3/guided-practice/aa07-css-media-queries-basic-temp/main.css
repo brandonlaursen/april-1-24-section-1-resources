@@ -83,14 +83,62 @@ header {
 }
 
 /* ----- Phase 1 - Moderate Screen ----- */
-
+@media screen and (min-width: 851px) and (max-width: 1219px) {
+    .content{
+        flex-direction: row;
+    }
+}
 /* Your code here */
 
 /* ----- Phase 1 - Wide Screen ----- */
-
+@media screen and (min-width: 1220px) {
+    .page {
+        flex-direction: row;
+    }
+    .content {
+        flex-direction: row;
+    }
+}
 /* Your code here */
 
 /* ===== PRINTING ===== */
+@media print {
+    header,
+    .sidebar {
+        display: none;
+        visibility: hidden;
+    }
+
+    .story-box {
+        background-color: white;
+        padding: 0;
+        filter: none;
+    }
+
+    .page,
+    .content {
+        padding: 0;
+    }
+
+    /* .image-box {
+        width: 85px;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        float: right;
+
+    } */
+
+    .image-box img {
+        position: absolute;
+        top: 60px;
+        right: 10px;
+
+        border-radius: 1px 40px;
+
+        width: 10%;
+    }
+}
 
 /* Phase 2 */
 
