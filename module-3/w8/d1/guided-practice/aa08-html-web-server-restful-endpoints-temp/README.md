@@ -49,10 +49,15 @@ Remember, HTML web servers should only accept requests with methods of `GET` and
   - `GET /`
   - `GET /home`
 - Submit a contact form
+  - POST/contact
 - Access the posts page
+  - GET/posts
 - Access the edit page for a post
+  - GET/posts/:postId/edit
 - Access the create page for a post
+  - GET/posts/new
 - Create a new user
+  - POST/users 
 - Log In
 - Log Out
 - Access the comments for a post page
