@@ -5,12 +5,27 @@
 
 
 ## `HTTP - Hypertext Transfer Protocol`
-  * HTTP is stateless
+  * The Hypertext Transfer Protocol (HTTP) is the foundation of the World Wide Web, and is used to load webpages using hypertext links
+  * Think of HTML
+    * HTML is the standard markup language for creating Web pages
+
+## `Request - Response cycle`
+  * The Request-Response Cycle is a fundamental concept in web development, describing the process by which a client (usually a web browser) requests information from a server, and the server responds with the requested data.
+
+### `Request`
+  * `request line`
+  * `header`
+  * `body`
+
+### `Response`
+  * `status line`
+  * `header`
+  * `body`
 
 ###  `Breaking down the request`
 `POST / HTTP/1.0`
 
-### Request line - first line of an http request
+### `Request line` - first line of an http request
 Made up of three parts
 1. `Method` - indicated by HTTP verb
 2. `URI` (Uniform Resource Indicator) identifies what you requested
@@ -23,11 +38,11 @@ Made up of three parts
     * URI - is root resource - /
     * POST - HTTP Verb for request
 
-### Headers
+### `Headers`
   - `Host`: appacademy.io
   - `Content-Length`: 31
   - `Content-Type`: application/x-www-form-urlencoded
-  - `Hos``t: appacademy.io
+  - `Host`: appacademy.io
   - KEY : VALUE
     - The request-line sets the table
     * These headers define how the server might process the request.
@@ -35,7 +50,7 @@ Made up of three parts
     * key - value pairs hat come after the request line
     * header key is case-insensitive
 
-### Body
+### `Body`
   `username=azure&password=hunter2`
   * When sending data that doesn't fit in a header and is too complex for the URI, the data can be placed in the body of our HTTP request.
   * The most common way form data is formatted is URL encoding. This is the default for data from web forms and looks a little like this:
@@ -45,7 +60,7 @@ Made up of three parts
 
 
 ### 5 Common HTTP Verbs
- CRUD - create, read, update, destroy
+ `CRUD` - create, read, update, destroy
 
 `GET` - read
   * retrieving resources from the server
@@ -101,12 +116,12 @@ Made up of three parts
   * `status-line` (instead of a request-line)
     - `HTTP/1.1 200 OK`
     - `HTTP version /  Status-Code / Reason-Phrase`
-  * headers that provide helpful metadata about the response
-  * the response body: a representation of the requested resource.
+  * `headers` that provide helpful metadata about the response
+  * the response `body`: a representation of the requested resource.
 
   HTTP status codes are a numeric way of representing a server's response. Each code is a three-digit number accompanied by a short description. They're grouped by the first digit (so, for example, all "Informational" codes begin with a 1: 100 - 199).
 
-### Common status codes
+### Common `status codes`
   - Status codes `100 - 199: Informational`
   - Status codes `200 - 299: Successful`
     * `200 OK`: Request received and fulfilled. These usually come with a body that contains the resource you requested.
@@ -136,7 +151,7 @@ Made up of three parts
     - what 500 status code you should return if your API is temporarily down for maintenance.
     - `503 Service Unavailable`
 
-### Headers
+### `Headers`
   * Headers on HTTP responses work identically to those on requests. They establish metadata that the receiving client might need to process the response.
   * `Content-Type` - Just like the Content-Type header of a request, the Content-Type header of a response lets the client know the format of the response body data and how to process it..
 
@@ -149,7 +164,7 @@ Made up of three parts
    * `image/png`	PNG Image
    * `application/json	JSON` - data format similar to JavaScript object
 
-### Body
+### `Body`
    * Assuming a successful request, the body of the response contains the resource you've requested.
    - The format of the body is dictated by the Content-Type header.
    * Headers may change how the browser handles the body, but they won't modify the body's content.
