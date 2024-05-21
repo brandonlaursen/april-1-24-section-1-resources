@@ -88,12 +88,33 @@ const server = http.createServer((req, res) => {
 
     // Phase 1: GET /dogs
     if (req.method === 'GET' && req.url === '/dogs') {
-      // Your code here 
+      // Your code here
+      const htmlPage = fs.readFileSync("./views/dogs.html", "utf-8");
+
+      let dogsList = "";
+
+      dogs.forEach(dog => {
+        dogsList += `<li>${dog.name}</li>`
+      })
+
+      const resBody = htmlPage.replace(/#{dogsList}/g,dogsList)
+
+      console.log(resBody);
+
+      res.statusCode = 200;
+      res.setHeader("Content-Type", "text/html");
+      return res.end(resBody);
     }
 
     // Phase 2: GET /dogs/new
     if (req.method === 'GET' && req.url === '/dogs/new') {
-      // Your code here 
+      // Your code here
+      const dogsFormPage = fs.readFileSync("./views/create-dog.html");
+
+      res.statusCode = 200;
+      res.setHeader("Content-Type", "text/html");
+
+      return res.end(dogsFormPage);
     }
 
     // Phase 3: GET /dogs/:dogId
@@ -102,13 +123,23 @@ const server = http.createServer((req, res) => {
       if (urlParts.length === 3) {
         const dogId = urlParts[2];
         const dog = dogs.find(dog => dog.dogId === Number(dogId));
-        // Your code here 
+        // Your code here
+        // console.log("dog ->",dog)
+
+        const dogDetails = fs.readFileSync("./views/dog-details.html", "utf-8");
+
+        const resBody = dogDetails.replace(/#{age}/g, dog.age).replace(/#{name}/g,dog.name)
+
+        res.setHeader("Content-Type", "text/html")
+        res.statusCode = 200;
+        res.end(resBody)
+        return;
       }
     }
 
     // Phase 4: POST /dogs
     if (req.method === 'POST' && req.url === '/dogs') {
-      // Your code here 
+      // Your code here
     }
 
     // Phase 5: GET /dogs/:dogId/edit
@@ -117,7 +148,7 @@ const server = http.createServer((req, res) => {
       if (urlParts.length === 4 && urlParts[3] === 'edit') {
         const dogId = urlParts[2];
         const dog = dogs.find(dog => dog.dogId === Number(dogId));
-        // Your code here 
+        // Your code here
       }
     }
 
@@ -127,7 +158,7 @@ const server = http.createServer((req, res) => {
       if (urlParts.length === 3) {
         const dogId = urlParts[2];
         const dog = dogs.find(dog => dog.dogId === Number(dogId));
-        // Your code here 
+        // Your code here
       }
     }
 
