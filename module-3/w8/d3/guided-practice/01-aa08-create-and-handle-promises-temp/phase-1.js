@@ -78,7 +78,7 @@ function liftWeights() {
   return request;
 }
 
-function workout() {
+async function workout() {
   // Your code here
   // stretch()
   //   .then(runOnTreadmill())
@@ -98,8 +98,16 @@ function workout() {
   //     console.log("done working out");
   //   });
 
-  Promise.all([stretch(), runOnTreadmill(), liftWeights()]).then(() => console.log('done working out'))
-
+  // Promise.all([stretch(), runOnTreadmill(), liftWeights()]).then(() => console.log('done working out'))
+  // Promise.all([stretch(), runOnTreadmill(), liftWeights()]).then(() => console.log('done working out'));
+  try {
+    await stretch(); // 1000
+    await runOnTreadmill(); // 1000
+    await liftWeights(); // 100
+    console.log("done working out!");
+  } catch (e) {
+    console.log(e);
+  }
 }
 
 // function myfunc() {
