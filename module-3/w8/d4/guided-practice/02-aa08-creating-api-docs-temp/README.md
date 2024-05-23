@@ -44,14 +44,28 @@ For example, to edit a specific post, the API endpoint could be
 `PATCH /posts/:postId`
 
 - Get all the posts
+  - GET/posts
 - Create a new post
+  - POST/post
 - Edit a post
+  - PUT/posts/:postId
+  - PATCH/posts/:postId
 - Create a new user
+  - POST/users
 - Get the comments for a post
+  - GET/posts/:postId/comments
 - Create a comment for a post
+  - POST/posts/:postId/comments
 - Edit a comment for a post
+  - PUT/posts/:postId/comments/:commentId
+  - PUT/comments/:commentId
 - Delete a comment for a post
+  - DELETE /posts/:postId/comments/:commentsId
 - Add a like for a post
+  - POST/ posts/:postId/like
 - Remove a like for a post
+  - DELETE/posts/:postId/likes/likeId
 - Get all the posts of a user
+  - GET/user/:userID/posts
 - Submit a search on posts
+  - POST/posts/search

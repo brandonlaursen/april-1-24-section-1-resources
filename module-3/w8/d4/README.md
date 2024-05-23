@@ -118,12 +118,12 @@ Traditional HTML Web server- interacting with html web pages - get & post
 
 
 
-## `Practice: Serialize and Deserialize JSON - 20min(Solo)`
+## `Practice: Serialize and Deserialize JSON - 30min`
 ## `Practice: Serialize and Deserialize JSON`
-## `Exercise: Create API documentation - 20min(Solo)`
+## `Exercise: Create API documentation - 20min`
 ## `Exercise: Create API documentation Walkthrough`
-## `Practice: Test API endpoints - 30min(Solo)`
+## `Practice: Test API endpoints - 20min`
 ## `Practice: Test API endpoints Walkthrough`
-## `Practice: Create API endpoints - 30min(Solo)`
+## `Practice: Create API endpoints - 30min`
 ## `Practice: Create API endpoints Walkthrough`
 ## `Work on Long Practice till EOD`
