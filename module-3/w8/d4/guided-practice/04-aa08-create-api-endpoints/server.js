@@ -56,11 +56,18 @@ const server = http.createServer((req, res) => {
       // Your code here
 
       //1. set status code
+      res.statusCode = 200;
       //2. set headers
+      res.setHeader('Content-Type', 'application/json')
       //3. return json and end response
 
+      // console.log('before ->',typeof dogs)
 
-      return res.end();
+      // console.log('after ->', typeof JSON.stringify(dogs))
+      // console.log('after stringify->', JSON.stringify(dogs))
+
+
+      return res.end(JSON.stringify(dogs));
     }
 
     // GET /dogs/:dogId
@@ -69,15 +76,40 @@ const server = http.createServer((req, res) => {
       if (urlParts.length === 3) {
         const dogId = urlParts[2];
         // Your code here
+
+        // console.log(typeof dogId, dogId) // diff data type
+
+        const foundDog = dogs.find(dog => +dogId === dog.dogId)
+        // console.log(foundDog) // fluffy
+
+        res.statusCode = 200;
+        res.setHeader('Content-Type','application/json')
+        return res.end(JSON.stringify(foundDog))
       }
-      return res.end();
+      // return res.end('Content-Type','application/json');
     }
 
     // POST /dogs
     if (req.method === 'POST' && req.url === '/dogs') {
       const { name, age } = req.body;
+      // console.log(name, age)
       // Your code here
-      return res.end();
+      // create a new doggo
+      // console.log('before ->', dogs)
+      const newDog = {
+        name,
+        age,
+        dogId : getNewDogId()
+      }
+
+      // add the new dog to db
+      dogs.push(newDog)
+
+      // console.log('after -> ', dogs)
+
+      res.statusCode = 201;
+      res.setHeader('Content-Type', 'application/json')
+      return res.end(JSON.stringify(newDog));
     }
 
     // PUT or PATCH /dogs/:dogId
@@ -86,8 +118,23 @@ const server = http.createServer((req, res) => {
       if (urlParts.length === 3) {
         const dogId = urlParts[2];
         // Your code here
+        const { name, age } = req.body;
+
+        // console.log('before ->', dogs)
+
+        // find the dog in the db using the id we enter into the url
+        const foundDog = dogs.find(dog => Number(dogId) === dog.dogId)
+
+        foundDog.name = name;
+        foundDog.age = age;
+
+        // console.log('after ->', dogs)
+
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'application/json');
+
+        return res.end(JSON.stringify(foundDog));
       }
-      return res.end();
     }
 
     // DELETE /dogs/:dogId
@@ -96,8 +143,21 @@ const server = http.createServer((req, res) => {
       if (urlParts.length === 3) {
         const dogId = urlParts[2];
         // Your code here
+
+        // console.log('before ->', dogs)
+        const dogIndex = dogs.findIndex(dog => dog.dogId == dogId)
+        // console.log(dogIndex); // 0
+
+        //remove fluffy from db
+        dogs.splice(dogIndex, 1);
+
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'application/json')
+
+        // console.log('after ->', dogs)
+
+        return res.end(JSON.stringify({message: "Successfully deleted"}));
       }
-      return res.end();
     }
 
     // No matching endpoint
