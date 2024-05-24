@@ -10,7 +10,34 @@ const growPlant = makePromise('growPlant');
 
  ******************************************************************************/
 
-// Your code here 
+// Your code here
+// console.log(addSoil()) // funcs -> return promises  Promise { true }
+// console.log(plantSeed()) // funcs -> Promise { Plant { seed: undefined, fullyGrown: false } }
+// console.log(growPlant()) // funcs -> undefined
+
+// .then
+const potPlant1 = (seed) => {
+  return addSoil()
+  .then(() => {
+    // console.log()
+    return plantSeed(seed)
+  })
+  .then((plant) => {
+    console.log(plant)
+    return growPlant(plant)
+  })
+}
+
+//async / await
+const potPlant = async (seed) => {
+
+  await addSoil() // resolves our promise to true
+
+  const plant = await plantSeed(seed)
+
+  return growPlant(plant)
+
+}
 
 
 /*******************************************************************************
