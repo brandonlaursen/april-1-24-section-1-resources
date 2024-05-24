@@ -25,7 +25,7 @@ const options = {
 fetch("/colors/1", options)
 // * 3. grabbed the res obj
 .then(res => {
-  console.log("what is res? -> \n", res) // returns Res.
+  console.log("what is res? -> \n", res) // returns Res. 
 
   // * 4. turned into json
   return res.json()
