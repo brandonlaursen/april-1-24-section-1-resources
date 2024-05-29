@@ -2,7 +2,6 @@
 
 
 - Exercise: NodeList vs. HTMLCollection
-- Element Selection Demo
 - Practice: Element Selection
 - Practice: Create/Remove Elements
 
