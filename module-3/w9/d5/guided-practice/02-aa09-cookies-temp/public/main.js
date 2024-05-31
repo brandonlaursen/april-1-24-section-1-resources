@@ -1,35 +1,84 @@
 /* ============================== PHASE 1 + 2 ============================== */
 
 // For storing user's theme selection in cookies
+
+function getCookieValue(cookieName) {
+    const cookies = document.cookie; //theme=griffin; display-name=Aaron
+    // console.log(cookie)
+
+    const splitCookies = cookies.split("; ") // ['theme=griffin', 'display-name=Aaron']
+    // console.log(splitCookies)
+
+    const found = splitCookies.find(cookie => {
+        return cookie.startsWith(cookieName)
+    })
+
+    // console.log(found)
+
+    if (!found) return false;
+
+    const value = found.split("=")[1]
+    // console.log(value)
+    return value;
+}
+
+
+const THEME_NAME = `theme`
+
 function storeTheme(themeName) {
-    // Your code here 
+    // Your code here
+    document.cookie = `${THEME_NAME}=${themeName}`
 }
 
 // For restoring theme from cookies, if selected by the user in the past
 function restoreTheme() {
-    // Your code here 
+    // Your code here
+
+    // one cookie -> 'theme=dragon'
+    // let cookie = document.cookie // 'theme=dragon'
+    // let theme = cookie.split("=")[1]
+
+    // // if (theme) setTheme(theme)
+
+    // theme && setTheme(theme)
+    const restoredTheme = getCookieValue(THEME_NAME)
+    // console.log("restoreTheme FUNC ->", restoredTheme)
+
+    restoredTheme && setTheme(restoredTheme)
 }
 
 // For clearing theme selection from cookies (reset to default)
 function clearTheme() {
-    // Your code here 
+    // Your code here
+    document.cookie = `${THEME_NAME}=; max-age=0`
 }
 
 /* ================================ PHASE 3 ================================ */
 
 // For storing user's display name in cookies
+
+const NAME_KEY = "display-name";
+
 function storeName(displayName) {
-    // Your code here 
+    // Your code here
+    document.cookie = `${NAME_KEY}=${displayName}` //
 }
 
 // For restoring user's display name from cookies, if set in the past
 function restoreName() {
-    // Your code here 
+    // Your code here
+
+    // how to address? create helper func a kind of cookie parser
+    const storedName = getCookieValue(NAME_KEY)
+    console.log("from restoreName func ->", storedName)
+
+    if (storedName) setInputValue("display-name", storedName)
 }
 
 // For clearing user's display name from cookies
 function clearName() {
-    // Your code here 
+    // Your code here
+    document.cookie = `${NAME_KEY}=; max-age=0`;
 }
 
 /* ========================================================================= */
